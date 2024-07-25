@@ -23,21 +23,20 @@ void printErrorMessage(const char *message)
 
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
-    if (isTemperatureOutOfRange(temperature)) 
+    if (isTemperatureOutOfRange(temperature) || isSocOutOfRange(soc) || isChargeRateOutOfRange(chargeRate)) 
     {
-        printErrorMessage("Temperature out of range!");
-        return 0;
-    }
-    
-    if (isSocOutOfRange(soc)) 
-    {
-        printErrorMessage("State of Charge out of range!");
-        return 0;
-    }
-    
-    if (isChargeRateOutOfRange(chargeRate))
-   {
-        printErrorMessage("Charge Rate out of range!");
+        if (isTemperatureOutOfRange(temperature)) 
+        {
+            printErrorMessage("Temperature out of range!");
+        }
+        if (isSocOutOfRange(soc)) 
+        {
+            printErrorMessage("State of Charge out of range!");
+        }
+        if (isChargeRateOutOfRange(chargeRate))
+        {
+            printErrorMessage("Charge Rate out of range!");
+        }
         return 0;
     }
     
