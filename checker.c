@@ -58,7 +58,7 @@ int main()
     scanf("%f", &chargeRate);
     
     printf("\n");
-    / Test case 1: Assert battery is okay
+    // Test case 1: Assert battery is okay
     assert(batteryIsOk(25.0, 50.0, 0.5));
 
     // Test case 2: Assert battery is not okay (Temperature out of range)
