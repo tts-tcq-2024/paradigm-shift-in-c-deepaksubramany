@@ -46,8 +46,20 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
 
 int main()
 {
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
+    float temperature, soc, chargeRate;
+    
+    printf("Enter temperature:");
+    scanf("%f", &temperature);
+    
+    printf("Enter State of Charge (SOC) (percentage): ");
+    scanf("%f", &soc);
+    
+    printf("Enter charge rate: ");
+    scanf("%f", &chargeRate);
+    
+    printf("\n");
+  assert(batteryIsOk(temperature, soc, chargeRate));
+  assert(!batteryIsOk(temperature, soc, chargeRate));
 }
 
 
