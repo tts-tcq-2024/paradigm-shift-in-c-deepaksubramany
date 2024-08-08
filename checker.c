@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-// Function to check if the battery is okay
+
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
     int isOk = 1;
